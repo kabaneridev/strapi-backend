@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vowels",
+  "info": {
+    "name": "Vowel",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "categories": {
+      "collection": "category",
+      "via": "vowels"
+    }
+  }
+}

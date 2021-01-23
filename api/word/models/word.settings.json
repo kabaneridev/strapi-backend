@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "words",
+  "info": {
+    "name": "word",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "categories": {
+      "collection": "category",
+      "via": "words"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "easy",
+        "hard"
+      ]
+    },
+    "DoubleS": {
+      "type": "boolean"
+    }
+  }
+}
